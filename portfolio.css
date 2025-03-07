@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     font-family: 'poppins', sans-serif;
 
 }
@@ -275,7 +274,7 @@ section{
     width: 600px;
     height: 500px;
     padding: 75px 90px;
-    margin: 120px;
+    margin-left: 120px;
 }
 .heading1{
     text-align: center;
@@ -287,10 +286,9 @@ section{
 .bar{
     font-size: 23px;
 }
-.Technical-bars .bar {
-    margin: 40px 0;
+.Technical-bars .bar{
+    margin-top: 40px 0;
 }
-
 .Technical-bars .bar:first-child{
     margin-top: 0;
 }
@@ -300,11 +298,12 @@ section{
 }
 .Technical-bars .bar .info{
     margin-bottom: 5px;
+
 }
 .Technical-bars .bar .info span{
     font-size: 17px;
     font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
+    animation: showtext 0.5s 1s linear forwards;
     opacity: 0;
 }
 .Technical-bars .bar .progress-line{
@@ -313,30 +312,27 @@ section{
     width: 100%;
     height: 5px;
     background-color: #000000;
-    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform:scaleX(0);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform:scaleX(0) ;
     transform-origin: left;
     
 }
 @keyframes animate {
-    from {
-        transform: scaleX(0);
+    100%{
+        transform:scaleX(1);
     }
-    to {
-        transform: scaleX(1);
-    }
+    
 }
-
-.Technical-bars .bar .progress-line span {
+.Technical-bars .bar .progress-line span{
     height: 100%;
     background-color: #0ef;
     position: absolute;
     border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
     transform: scaleX(0);
     transform-origin: left;
-}
 
+}
 .progress-line.html span{
     width: 90%;
 }
@@ -396,7 +392,7 @@ section{
     border-top-color: #000;
     top: -10px;
     right: 0;
-    animation: showText 0.5s 1.5s linear forwards;
+    animation:showtext 0.5s 1.5s linear forwards;
     opacity: 0;
 
 }
@@ -558,15 +554,12 @@ section{
 }
 .contact-form form .send{
     display: inline-block;
-    padding: 40px 60px;
     background: #0ef;
-    border-radius: 40px;
-    font-size: 18px;
     color: #081b29;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
-    opacity: 0;
+    opacity: 1;
     animation: slidetop 1s ease forwards;
     animation-delay: 2s;
     box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
